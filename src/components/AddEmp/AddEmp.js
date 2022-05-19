@@ -3,15 +3,15 @@ import { useState } from "react"
 import axios from 'axios'
 
 const AddTodo = () => {
-    const [todo, setTodo] = useState({})
+    const [emp, setEmp] = useState({})
 
     const handleChange = (event) =>{
         const {name,value} = event.target
-        setTodo({...todo,id: Math.random(),[name]:value})
+        setEmp({...emp,id: Math.random(),[name]:value})
     } 
 
     const handleSubmit = () => {
-        axios.post('http://localhost:8080/add-todo', todo)
+        axios.post('http://localhost:8080/add-emp', emp)
         .then(response => console.log(response.data))
     }
     

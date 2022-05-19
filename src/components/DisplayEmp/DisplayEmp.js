@@ -1,23 +1,23 @@
 import { Grid, List } from "@mui/material"
-import TodoItem from "../TodoItem/TodoItem"
+import EmpItem from "../EmpItem/EmpItem"
 import axios from 'axios'
 import { useEffect } from "react"
 import {connect} from 'react-redux'
-import {showEmp} from '../../redux/todoList/todo.action'
-const DisplayEmp = ({showTodo,getTodoList}) => {
+import {showEmp} from '../../redux/empList/emp.action'
+const DisplayEmp = ({showemp,getempList}) => {
     useEffect(() => {
       axios.get('http://localhost:8080/show-emp')
-      .then(response => showTodo(response.data))
+      .then(response => showemp(response.data))
     })
     return(
         <>
             <Grid container>
                 <List >
                     {
-                        getTodoList.map(
-                            todo => <TodoItem 
-                                        key={todo.id}
-                                        todo={todo}
+                        getempList.map(
+                            emp => <empItem 
+                                        key={emp.id}
+                                        emp={emp}
                                     />
                         )
                     }
@@ -27,9 +27,9 @@ const DisplayEmp = ({showTodo,getTodoList}) => {
     )
 }
 const mapDispatchToProps = dispatch => ({
-    showEmp: todoList => dispatch(showTodo(todoList)) 
+    showemp: empList => dispatch(showemp(EmpList)) 
 })
 const mapStateToProps = state => ({
-    getEmpList: state.todo.empList
+    getEmpList: state.emp.empList
 })
-export default  connect(mapStateToProps,mapDispatchToProps)(DisplayTodo)
+export default  connect(mapStateToProps,mapDispatchToProps)(DisplayEmp)

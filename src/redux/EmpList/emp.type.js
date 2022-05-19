@@ -1,3 +1,3 @@
 export const empActionTypes = {
-    'SHOW_TODOS': 'SHOW_TODOS'
+    'SHOW_EMP': 'SHOW_EMP'
 }

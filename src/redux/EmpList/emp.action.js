@@ -1,6 +1,6 @@
-import { todoActionTypes } from "./emp.type"
+import { empActionTypes } from "./emp.type"
 
-export const showTodo = (todoList) => ({
-    type: todoActionTypes.SHOW_TODOS,
-    payload: todoList
+export const showEmp = (empList) => ({
+    type: empActionTypes.SHOW_EMP,
+    payload: empList
 })

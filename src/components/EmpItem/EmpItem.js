@@ -3,13 +3,13 @@ import { Divider, ListItem, ListItemText} from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 
-const TodoItem = ({todo:{todoName,todoDescription}}) => {
+const EmpItem = ({emp:{empName,empDescription}}) => {
     return(
         <>
             <ListItem alignItems="flex-start">
                 <ListItemText
-                    primary={todoName}
-                    secondary={todoDescription}
+                    primary={empName}
+                    secondary={empDescription}
                 />
                 <EditIcon />
                 <DeleteIcon />
@@ -20,4 +20,4 @@ const TodoItem = ({todo:{todoName,todoDescription}}) => {
     )
 }
 
-export default TodoItem
+export default EmpItem

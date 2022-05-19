@@ -1,7 +1,7 @@
 import { Grid } from '@mui/material';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import AddEmp from './components/AddTodo/AddTodo';
+import AddEmp from './components/AddEmp/AddEmp';
 import DisplayEmp from './components/DisplayEmp/DisplayEmp';
 
 function App() {
@@ -13,11 +13,11 @@ function App() {
           <Grid container> {/**ROW */}
               <Grid item lg={6}> {/** Column 6 */}
                 <h2 style={{textAlign:'center'}}>ADD Emp</h2>
-                <AddTodo />
+                <AddEmp />
               </Grid>
               <Grid item lg={6}> {/** Column 6 */}
                 <h2 style={{textAlign:'center'}}>DISPLAY Emp</h2>
-                <DisplayTodo />
+                <DisplayEmp />
               </Grid>
           </Grid>
         </Box>

@@ -1,7 +1,7 @@
 import { empActionTypes } from "./emp.type"
 
 const INTIAL_STATE = {
-    todoList: []
+    empList: []
 }
 export const empReducer = (state=INTIAL_STATE, action) => {
     switch (action.type) {
